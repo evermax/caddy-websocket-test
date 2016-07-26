@@ -2,7 +2,7 @@
 
 What to do to test that:
 
-- Download the version of caddy you wanna test
+- Download the version of caddy you wanna test for linux amd64
 - Put a copy inside the `proxy` folder named `caddy`
 - Put a copy inside the `ws` folder named `caddy`
 - Run `docker-compose up` to start the two containers
