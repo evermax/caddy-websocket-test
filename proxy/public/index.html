@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<head>
+    <title>Test websocket caddy</title>
+</head>
+<body>
+<script>
+if ('WebSocket' in window) {
+    var url = "ws://" + location.hostname + (location.port ? ':'+location.port: '') + "/chsk";
+    var connection = new WebSocket(url);
+    connection.onopen = function () {
+        console.log("Connection opened");
+        connection.send("Message");
+    }
+    connection.onclose = function () {
+        console.log("Connection closed");
+    }
+    connection.onerror = function (e) {
+        console.log("Error on the connection: ", error);
+    }
+    connection.onmessage = function (m) {
+        console.log("Message: ", m.data);
+    }
+}
+</script>
+</body>
